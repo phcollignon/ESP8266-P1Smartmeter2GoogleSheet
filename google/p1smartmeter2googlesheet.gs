@@ -1,5 +1,5 @@
 function doPost(e) {
-  Logger.log(e.postData.contents);
+
     var ss = SpreadsheetApp.getActiveSpreadsheet();
     var sheet = ss.getSheets()[0]; 
     var data ;
