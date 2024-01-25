@@ -1,4 +1,4 @@
-# Smartmeter (P1 Port) Data Uploader to Google Sheets
+# Smartmeter (P1 Port) to Google Sheets Data Uploader
 
 ## Project Overview
 This project provides a solution for uploading data from a Smartmeter's P1 port directly to a Google Sheet. It's designed to work with the ESP8266 microcontroller powered from the P1 port itself; specifically, the ESP-01 module has been used, but the setup can be easily adapted for a Wemos D1 without the need for a voltage divider.
