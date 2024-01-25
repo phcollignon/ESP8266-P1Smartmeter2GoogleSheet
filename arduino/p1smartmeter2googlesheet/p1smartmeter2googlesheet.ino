@@ -3,10 +3,10 @@
 #include "HTTPSRedirect.h"
 
 // ** User defined **
-const char *WIFI_SSID = "SkyObject";          // Your WiFi SSID
-const char *WIFI_PASSWORD = "phico4wifi7ok";  // Your WiFi password
-// Google script ID, please look readme to create Google Sheet, App Script and genereate Google Script Deployment ID
-const char *GOOGLE_SCRIPT_ID = "AKfycbzfaVDOb8MshUzbTP7UMtbDO60Z6rLogYCGPp-_lQ64tM0Apv1lMXrRb0GWs9W8xjDxZw";
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
+const char* google_script_id = "YOUR_GOOGLE_SCRIPT_DEPLOYMENT_ID";
+
 const int UPDATE_INTERVAL = 60000;  // in milliseconds
 // ** End of user defined **
 
@@ -346,6 +346,7 @@ void read_p1_hardwareserial() {
 
       processLine(len);
     }
+    send_data_to_google();
   }
 }
 
@@ -356,7 +357,6 @@ void processLine(int len) {
 
   bool result = decode_telegram(len + 1);
   if (result) {
-    send_data_to_google();
     last_update_sent = millis();
   }
 }
