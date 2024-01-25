@@ -1,20 +1,21 @@
 # Smartmeter (P1 Port) to Google Sheets Data Uploader
 
 ## Project Overview
-This project provides a solution for uploading data from a Smartmeter's P1 port directly to a Google Sheet. It's designed to work with the ESP8266 microcontroller powered from the P1 port itself; specifically, the ESP-01 module has been used, but the setup can be easily adapted for a Wemos D1 without the need for a voltage divider.
+This project provides a solution for uploading data from a Smartmeter's P1 port directly to a Google Sheet. It's designed to work with the ESP8266 microcontroller powered from the P1 port itself.
+![Alt text](doc/image0.png)
+Specifically, the ESP-01 module has been used, but the setup can be easily adapted for a Wemos D1 without the need for a voltage divider
 
 ## Schemas
-Included in this repository are two schemas for connecting the P1 port to the ESP8266:
+Here are two schemas for connecting the P1 port to two different ESP8266 devices:
 
-- `Schema-ESP-01.png`: For setting up with ESP-01.
-- `Schema-Wemos-D1.png`: For setting up with Wemos D1.
-
+- For setting up with ESP-01.
 ![ESP-01 Schema](doc/Schema-ESP-01.png)
+-  For setting up with Wemos D1.
 ![Wemos D1 Schema](doc/Schema-Wemos-D1.png)
 
 ## Hardware Setup
 
-1. Connect the Smartmeter's P1 port to the ESP-01 according to the `Schema-ESP-01.png`.
+1. Connect the Smartmeter's P1 port to the ESP-8266 according to the schema.
 2. Ensure that the voltage levels are compatible (5V to 3.3V).
 3. Use the provided Arduino sketch (`p1smartmeter2googlesheet.ino`) and Http library (`lib/HTTPSRedirect-main.zip`) to program the ESP8266.
 4. Select the correct board and port in the Arduino IDE.
