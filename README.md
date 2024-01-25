@@ -1,7 +1,7 @@
-# Smartmeter (P1 Port) to Google Sheets Data Uploader
+# Smart Meter (P1 Port) to Google Sheets Data Uploader
 
 ## Project Overview
-This project provides a solution for uploading data from a Smartmeter's P1 port directly to a Google Sheet. It's designed to work with the ESP8266 microcontroller powered from the P1 port itself.
+This project provides a solution for uploading data from a smart meter's P1 port directly to a Google Sheet. It's designed to work with the ESP8266 microcontroller powered from the P1 port itself.
 ![Alt text](doc/image0.png)
 Specifically, the ESP-01 module has been used, but the setup can be easily adapted for a Wemos D1 without the need for a voltage divider
 
@@ -15,7 +15,7 @@ Here are two schemas for connecting the P1 port to two different ESP8266 devices
 
 ## Hardware Setup
 
-1. Connect the Smartmeter's P1 port to the ESP-8266 according to the schema.
+1. Connect the smart meter's P1 port to the ESP-8266 according to the schema.
 2. Ensure that the voltage levels are compatible (5V to 3.3V).
 3. Use the provided Arduino sketch (`p1smartmeter2googlesheet.ino`) and Http library (`lib/HTTPSRedirect-main.zip`) to program the ESP8266.
 4. Select the correct board and port in the Arduino IDE.
@@ -55,7 +55,7 @@ Make sure that you do not share your Wi-Fi credentials or Google Script Deployme
 
 
 ## Usage
-With the hardware set up, the Arduino sketch uploaded, and the Google Apps Script deployed, your ESP8266 will start sending data from the Smartmeter to the linked Google Sheet. The data transfer will occur automatically based on the code's logic in the `.ino` file.  You can change the data log frequency in the .ino file (`const int UPDATE_INTERVAL = 60000;  // in milliseconds`)
+With the hardware set up, the Arduino sketch uploaded, and the Google Apps Script deployed, your ESP8266 will start sending data from the smart meter to the linked Google Sheet. The data transfer will occur automatically based on the code's logic in the `.ino` file.  You can change the data log frequency in the .ino file (`const int UPDATE_INTERVAL = 60000;  // in milliseconds`)
 
 Here is a screenshot of the expected result :
 
@@ -64,7 +64,7 @@ Feel free to add some charts and data analysis in other Sheets.  First Sheet mus
 
 ## Troubleshooting
 If you encounter any issues with data not appearing in your Google Sheet, verify the following:
-- The ESP8266 is correctly connected to the Smartmeter.
+- The ESP8266 is correctly connected to the smart meter.
 - The Wi-Fi credentials in the `.ino` file are correct and the ESP8266 is connected to the internet.
 - The Google Script is correctly deployed, its Deployment ID is correctly entered in the `.ino` file.  
 - The Google Apps Script is deployed correctly as a web app and has the correct permissions.
